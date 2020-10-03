@@ -77,6 +77,7 @@ export function login(username, password) {
                 return response.json();
             }})
             .then((data) => {
+                console.log("@@@@@@@@@@@@@@@",data);
                 if (success) {
                     localStorage.setItem('DONNA', data.access);
                     const user = jwt_decode(data.access);
